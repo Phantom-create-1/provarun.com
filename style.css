@@ -59,6 +59,10 @@ footer a { color: var(--muted); }
 .hero h1 { color: #173235; font-size: clamp(2.4rem, 10.5vw, 3.8rem); line-height: 1.03; letter-spacing: -.055em; }
 .hero h1 em { font-weight: 400; }
 .hero .lead { max-width: 450px; margin: 18px auto 12px; font-size: 1rem; line-height: 1.55; color: #193438; text-wrap: pretty; }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 24px; margin-top: 20px; }
+.store-button { display: inline-flex; justify-content: center; align-items: center; max-width: 100%; padding: 12px 20px; border: 1px solid var(--accent); border-radius: 3px; background: var(--accent); color: var(--bg); font-size: .9375rem; font-weight: 600; line-height: 1.5; text-align: center; text-decoration: none; }
+.store-button:hover { text-decoration: underline; }
+.store-button:focus-visible { outline-color: var(--accent); }
 .hero-link { display: inline-flex; align-items: center; gap: 27px; border-bottom: 1px solid #53605a; color: #173235; font-size: .8125rem; text-decoration: none; padding: 8px 0; }
 .hero-link:hover { border-bottom-width: 2px; }
 .hero-bottom { margin-top: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; padding: 24px; gap: 20px; }
@@ -115,10 +119,10 @@ footer a { color: var(--muted); }
 .privacy > p:not(.eyebrow) { max-width: 495px; margin-inline: auto; font-size: 1rem; line-height: 1.8; }
 .privacy .text-link { margin-top: 7px; }
 .closing { padding-bottom: 40px; }
-.soon { padding: 0 0 52px; margin-bottom: 44px; border-bottom: 1px solid var(--line); }
-.soon .eyebrow { color: var(--accent); }
-.soon p:last-child { margin-bottom: 0; font-size: .9375rem; max-width: 630px; }
-.soon strong { display: block; font: 400 1.7rem/1.3 var(--serif); letter-spacing: -.025em; margin-bottom: 14px; }
+.available { padding: 0 0 52px; margin-bottom: 44px; border-bottom: 1px solid var(--line); }
+.available .eyebrow { color: var(--accent); }
+.available > div > p { max-width: 630px; font-size: .9375rem; }
+.available > div > .available-title { color: var(--text); font: 400 clamp(2rem, 4vw, 3rem)/1.2 var(--serif); letter-spacing: -.025em; margin-bottom: 14px; }
 .notice { display: grid; gap: 20px; }
 .home .notice h2 { font: 600 .75rem/1.6 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: .06em; }
 .notice p { font-size: .8125rem; }
@@ -184,8 +188,8 @@ footer a { color: var(--muted); }
   .track-art { margin-top: 65px; }
   .privacy { padding-block: 120px; }
   .closing { padding-block: 70px 40px; }
-  .soon, .notice { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
-  .soon .eyebrow { padding-top: 8px; }
+  .available, .notice { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+  .available .eyebrow { padding-top: 8px; }
   .footer-top nav { order: 0; width: auto; margin-left: auto; }
   .back-top { margin-left: 5px; }
   .home-footer { padding-block: 40px 30px; }
