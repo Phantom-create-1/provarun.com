@@ -1,0 +1,34 @@
+# Provarun
+
+> Provarun is an iPhone app for reviewing sprint times from video over 50–800 metres. Timing is free, with optional Pro subscriptions. Videos and times stay locally on the iPhone; no account is required. Results are training measurements, not federation-certified race timing. The app interface is currently in German; an English version is on its way. Listed App Stores include Germany, Austria, Switzerland and Luxembourg.
+
+Provarun misst Sprintzeiten aus dem Video. Kostenlose Zeitmessung, optionales Pro-Abo, lokale Videos und Zeiten, ohne Konto. Die App-Oberfläche ist derzeit auf Deutsch; Englisch ist in Arbeit. Die Website gibt Studienbedingungen und Quellen an. Rekorde sind keine Durchschnittswerte. Ein Video-Bildabstand ist keine garantierte Messgenauigkeit.
+
+## Deutsch
+
+- [Provarun](https://provarun.com/): App, Aufbau, Preise und häufige Fragen.
+- [Über die App](https://provarun.com/ueber.html#app-fakten): aktueller Funktionsstand.
+- [Geschichten](https://provarun.com/blog.html): alle Beiträge.
+- [Warum der Mensch sprintet](https://provarun.com/geschichten-warum-der-mensch-sprintet.html): Mechanik, Muskeln, Training und Primärquellen.
+- [Sprintzeit mit dem Handy messen](https://provarun.com/geschichten-sprintzeit-handy-messen.html): Bildrate, Zeitraster, Start und Messbedingungen.
+- [100-m- und 400-m-Zeiten](https://provarun.com/geschichten-sprintzeiten-einordnen.html): offizielle Rekorde und Grenzen der Einordnung.
+- [Wiedereinstieg](https://provarun.com/geschichten-sprinten-wiedereinstieg.html): vier Wochen als redaktionelle Orientierung.
+- [Provarun ist da](https://provarun.com/blog-provarun-ist-da.html): die erste Version.
+
+## English
+
+- [Provarun](https://provarun.com/en/): app setup, pricing and FAQ.
+- [About the app](https://provarun.com/en/about.html#app-fakten): current features.
+- [Stories](https://provarun.com/en/stories.html): all articles.
+- [Why humans sprint](https://provarun.com/en/why-humans-sprint.html): mechanics, muscles, training and original sources.
+- [Phone sprint timing](https://provarun.com/en/sprint-timing-phone.html): frame rate, time resolution and measurement conditions.
+- [100-m and 400-m times](https://provarun.com/en/100m-400m-sprint-times.html): official records and their limits.
+- [Returning to sprinting](https://provarun.com/en/return-to-sprinting.html): a four-week editorial guide.
+- [Provarun is here](https://provarun.com/en/provarun-is-here.html): the first release.
+
+## Support and legal information (German)
+
+- [Support](https://provarun.com/support.html)
+- [Privacy](https://provarun.com/datenschutz.html)
+- [Legal notice](https://provarun.com/impressum.html)
+- [Terms](https://provarun.com/nutzungsbedingungen.html)

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://provarun.com/sitemap.xml

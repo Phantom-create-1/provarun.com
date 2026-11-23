@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://provarun.com/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/" />
+  </url>
+  <url>
+    <loc>https://provarun.com/ueber.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/ueber.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/about.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/about.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/ueber.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/about.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/blog.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/blog.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/stories.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/stories.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/stories.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/blog.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/stories.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/stories.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/geschichten-warum-der-mensch-sprintet.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-warum-der-mensch-sprintet.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/why-humans-sprint.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/why-humans-sprint.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/why-humans-sprint.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-warum-der-mensch-sprintet.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/why-humans-sprint.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/why-humans-sprint.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/blog-provarun-ist-da.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/blog-provarun-ist-da.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/provarun-is-here.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/provarun-is-here.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/provarun-is-here.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/blog-provarun-ist-da.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/provarun-is-here.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/provarun-is-here.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/geschichten-sprintzeit-handy-messen.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-sprintzeit-handy-messen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/sprint-timing-phone.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/sprint-timing-phone.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/sprint-timing-phone.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-sprintzeit-handy-messen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/sprint-timing-phone.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/sprint-timing-phone.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/geschichten-sprintzeiten-einordnen.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-sprintzeiten-einordnen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/100m-400m-sprint-times.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/100m-400m-sprint-times.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/100m-400m-sprint-times.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-sprintzeiten-einordnen.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/100m-400m-sprint-times.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/100m-400m-sprint-times.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/geschichten-sprinten-wiedereinstieg.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-sprinten-wiedereinstieg.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/return-to-sprinting.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/return-to-sprinting.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/en/return-to-sprinting.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://provarun.com/geschichten-sprinten-wiedereinstieg.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://provarun.com/en/return-to-sprinting.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://provarun.com/en/return-to-sprinting.html" />
+  </url>
+  <url>
+    <loc>https://provarun.com/support.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://provarun.com/datenschutz.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://provarun.com/impressum.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://provarun.com/nutzungsbedingungen.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+</urlset>
