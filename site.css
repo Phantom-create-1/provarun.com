@@ -115,47 +115,19 @@ li { margin-bottom: 16px; }
 .panther-stage { position: relative; max-width: 1920px; margin-inline: auto; }
 .panther-stage picture { position: relative; width: 100%; aspect-ratio: 1913 / 822; }
 .panther-stage img { width: 100%; height: auto; }
-.drawing-overlay { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--text); pointer-events: none; z-index: 3; }
-.drawing-overlay * { vector-effect: non-scaling-stroke; }
-.anatomy-study { background: #0D0C0B; }
-.anatomy-stage { position: relative; overflow: hidden; }
-.anatomy-stage picture { aspect-ratio: 3 / 2; }
-.anatomy-stage img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
-.anatomy-lines { stroke-width: 1.2; }
-.muscle-mark { opacity: .7; }
-.muscle-labels { list-style: none; margin: 0; padding: 0; }
-.muscle-label { position: absolute; z-index: 4; margin: 0; padding: 7px 12px; border: 1px solid #FFFFFF14; border-radius: 999px; background: rgb(17 16 15 / 78%); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: var(--text); font-size: var(--type-small); line-height: 1.4; }
-/* Die Etiketten beziehen sich auf die Bildfläche, nicht auf die Bildunterschrift. */
-.muscle-labels { position: absolute; inset: 0 0 auto; aspect-ratio: 3 / 2; pointer-events: none; }
-.muscle-label.mark-upper { left: 15%; top: 25%; }
-.muscle-label.mark-glutes { left: 19%; top: 44%; }
-.muscle-label.mark-flexors { right: 16%; top: 33%; }
-.muscle-label.mark-quads { right: 4%; top: 51%; }
-.muscle-label.mark-hamstrings { left: 8%; top: 59%; }
-.muscle-label.mark-calves { left: 8%; top: 76%; }
-.mark-upper { --mark-delay: 0ms; }
-.mark-glutes { --mark-delay: 100ms; }
-.mark-flexors { --mark-delay: 200ms; }
-.mark-quads { --mark-delay: 300ms; }
-.mark-hamstrings { --mark-delay: 400ms; }
-.mark-calves { --mark-delay: 500ms; }
-.force-mark { --mark-delay: 600ms; opacity: .7; }
-.anatomy-caption { position: relative; z-index: 3; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px; align-items: center; padding: 16px 32px; color: var(--link); font-size: var(--type-small); line-height: 1.7; }
-.force-legend { display: inline-flex; gap: 12px; align-items: center; }
-.force-key { flex: none; width: 24px; height: 24px; }
-.anatomy-source { margin: 0; }
-/* Offene Notizen am Bild statt einer zweiten Reihe großer Zahlenkarten. */
-.biology-notes { display: grid; gap: 32px; margin-top: 32px; }
-.biology-note { display: grid; grid-template-columns: 160px 176px minmax(0, 1fr); gap: 24px; align-items: start; }
-.biology-note .eyebrow { letter-spacing: .08em; margin: 8px 0 0; }
-.biology-note h3 { margin: 0; font-size: clamp(2rem, 3.4vw, 2.75rem); line-height: 1.15; font-weight: 500; letter-spacing: -.04em; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.biology-note h3 span { display: block; margin-top: 4px; font-size: .55em; letter-spacing: -.02em; }
-.note-copy { min-width: 0; }
-.note-copy > p:first-child { color: var(--secondary); margin: 0; max-width: 36em; }
-.anatomy-source, .note-copy .source, .health-study .source { font-family: inherit; font-size: .8125rem; line-height: 1.8; }
-.note-copy .source, .health-study .source { margin: 8px 0 0; }
-.anatomy-source a, .note-copy .source a, .health-study .source a { color: var(--muted); }
-.anatomy-source a:hover, .note-copy .source a:hover, .health-study .source a:hover { color: var(--link); }
+/* Körperfakten schließen direkt an das Panther-Motiv an. */
+.panther-details { width: 100%; margin: 24px auto 0; padding-inline: var(--gutter); }
+.sprint-intro { margin: 0 0 20px; font-size: 1rem; line-height: 1.6; color: var(--secondary); max-width: 62ch; }
+.sprint-lead { color: var(--text); font-weight: 500; }
+.sprint-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; list-style: none; padding: 0; margin: 0; }
+.sprint-fact { display: grid; grid-template-rows: auto 1fr auto; min-width: 0; margin: 0; }
+.sprint-fact h3 { margin: 0 0 8px; font-size: clamp(1.75rem, 2.4vw, 2.25rem); line-height: 1.15; font-weight: 500; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.sprint-fact > p:not(.source) { margin: 0; color: var(--secondary); font-size: 1rem; line-height: 1.55; }
+.sprint-fact .source, .health-study .source { font-family: inherit; font-size: .8125rem; line-height: 1.8; }
+.sprint-fact .source { margin: 4px 0 0; }
+.health-study .source { margin: 8px 0 0; }
+.sprint-fact .source a, .health-study .source a { color: var(--muted); }
+.sprint-fact .source a:hover, .health-study .source a:hover { color: var(--link); }
 .track-image img, .setup-image img, .about-image img { width: 100%; height: auto; }
 .return { padding-block: 0; }
 .health-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; margin-top: 80px; }
@@ -283,9 +255,6 @@ li { margin-bottom: 16px; }
   .faq summary::after { transition: transform 160ms ease; }
   .reveal.is-entering { animation: soft-in 800ms cubic-bezier(.2,.65,.3,1) both; }
   @keyframes soft-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  .anatomy-study.is-illuminating .muscle-mark,
-  .anatomy-study.is-illuminating .force-mark { animation: muscle-light 1100ms ease-out var(--mark-delay) both; }
-  @keyframes muscle-light { 0% { opacity: .25; } 40% { opacity: 1; } 100% { opacity: .7; } }
   @supports (animation-timeline: --hero) and (view-timeline-name: --hero) and (view-timeline-inset: 0) and (animation-range: exit-crossing 0% exit-crossing 100%) {
     .hero.is-scroll-ready { view-timeline-name: --hero; view-timeline-axis: block; view-timeline-inset: 0; }
     .hero.is-scroll-ready .hero-copy {
@@ -364,9 +333,6 @@ li { margin-bottom: 16px; }
   .section-head { display: block; margin-bottom: 48px; }
   .section-copy { margin-top: 32px; max-width: 32em; }
   .section-head > .text-link { margin-top: 24px; }
-  .biology-notes { gap: 32px; }
-  .biology-note { grid-template-columns: 112px minmax(0, 1fr); gap: 12px 24px; }
-  .biology-note .eyebrow { grid-column: 1 / -1; margin: 0; }
   .health-stats { grid-template-columns: 1fr; gap: 40px; margin-top: 48px; }
   .health-study-pair { grid-column: auto; }
   .health-study-values { grid-template-columns: 1fr; gap: 32px; }
@@ -410,13 +376,6 @@ li { margin-bottom: 16px; }
   .article-callout { padding: 32px; }
 }
 @media (max-width: 700px) {
-  .anatomy-stage picture { aspect-ratio: 4 / 5; }
-  /* Exakt derselbe Ausschnitt wie die mobile Bilddatei: x=320..1136, y=0..1020. */
-  .anatomy-lines { width: 188.2353%; height: 100.3922%; left: -39.2157%; }
-  .muscle-mark path { display: none; }
-  .muscle-labels { position: relative; inset: auto; aspect-ratio: auto; display: flex; flex-wrap: wrap; gap: 8px; padding: 24px 24px 0; }
-  .muscle-labels .muscle-label { position: static; font-size: .875rem; padding: 7px 10px; }
-  .anatomy-caption { padding: 16px 24px; }
   /* Das Hochformat wird nur oben/unten beschnitten: volle Breite, Kopf und
      Schwanz bleiben erhalten. Sichtfenster im 1024er Bild: y ≈ 614–1297. */
   .panther-stage picture { aspect-ratio: 3 / 2; }
@@ -434,7 +393,6 @@ li { margin-bottom: 16px; }
   .hero-bottom .label { letter-spacing: .08em; }
   .hero-press img { width: 80px; }
   .hero-press { gap: 10px; }
-  .biology-note { grid-template-columns: 96px minmax(0, 1fr); gap: 12px 16px; }
   .screen-figure figcaption { margin-top: 16px; }
   .screens { gap: 16px; }
   .press-card { padding-inline: 24px; }
@@ -538,25 +496,6 @@ li { margin-bottom: 16px; }
   .nature-intro { padding-bottom: 24px; }
   .panther-visual { width: min(calc(100% - var(--gutter) * 2), 1200px, calc((100svh - 300px) * 1913 / 822)); margin-inline: auto; border-radius: var(--radius); }
 
-  /* Anatomie: Bild und Overlay skalieren zusammen; die Notizen stehen beim Kopf.
-     So bleibt das gesamte Kapitel einschließlich Legende und Quellen im Blick. */
-  .physics > .shell { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 24px 40px; align-items: start; }
-  .physics .section-head { display: block; grid-column: 1; margin: 0; }
-  .physics .section-copy { max-width: none; margin-top: 24px; }
-  .physics .anatomy-study { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 100%; max-width: calc((100svh - 160px) * 1.5); justify-self: center; }
-  .biology-notes { grid-column: 1; margin: 0; gap: 16px; }
-  .biology-note { grid-template-columns: 160px minmax(0, 1fr); gap: 4px 16px; }
-  .biology-note .eyebrow { grid-column: 1; grid-row: 1; margin: 0; }
-  .biology-note h3 { grid-column: 1; grid-row: 2; font-size: clamp(1.5rem, 2.38vw, 1.925rem); }
-  .biology-note .note-copy { grid-column: 2; grid-row: 1 / span 2; }
-  .biology-note .source { margin-top: 0; }
-  .anatomy-caption { padding: 12px 20px; gap: 0 16px; }
-  /* Kleine Bildfläche: Etiketten bleiben lesbar und verdecken keine Körperteile.
-     Die SVG-Punkte behalten ihre exakte Bildposition. */
-  .physics .muscle-mark path { display: none; }
-  .physics .muscle-labels { position: static; display: flex; flex-wrap: wrap; gap: 6px; padding: 16px 20px 0; aspect-ratio: auto; }
-  .physics .muscle-label { position: static; font-size: .875rem; padding: 5px 9px; }
-
   .track-image { max-width: calc((100svh - 340px) * 1.5); justify-self: center; }
   .health-stats { margin-top: 32px; gap: 32px; }
   .health-stat h3 { font-size: var(--type-section); margin-bottom: 16px; }
@@ -627,7 +566,6 @@ li { margin-bottom: 16px; }
   .document-copy > :first-child { margin-top: 0; }
 }
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .physics > .shell { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); }
   #app-fakten .body-copy { font-size: 1rem; }
 }
 
@@ -646,6 +584,7 @@ li { margin-bottom: 16px; }
 }
 /* Handy/Tablet: Reihenfolge Kopf → Text → Link */
 @media (max-width: 1023px) {
+  .panther-moment { padding-bottom: var(--section-space); }
   .panther-card > .nature-intro { display: flex; flex-direction: column; align-items: flex-start; gap: 0; text-align: left; }
   .panther-card .nature-intro .eyebrow { margin-bottom: 16px; }
   .panther-card > .nature-intro > div:first-child { display: contents; }
@@ -663,8 +602,25 @@ li { margin-bottom: 16px; }
   .hero { width: var(--card-w); margin-inline: auto; min-height: 560px; height: min(calc(100svh - 128px), calc(var(--card-w) * .54 + 64px)); max-height: none; }
 }
 @media (min-width: 1024px) {
-  .panther-card { width: min(var(--card-w), calc((100svh - 100px) * 1913 / 822)); }
+  .panther-card { width: var(--card-w); }
+  .panther-stage picture { aspect-ratio: auto; height: min(calc(var(--card-w) * 822 / 1913), calc(100svh - 300px)); }
+  .panther-stage img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center 85%; }
 }
 @media (min-width: 801px) and (max-width: 1023px) {
   .panther-card .panther-visual { width: var(--card-w); margin-inline: auto; border-radius: var(--radius); }
+}
+
+@media (min-width: 801px) {
+  .panther-details { width: var(--card-w); padding-inline: 0; }
+}
+@media (max-width: 800px) {
+  .sprint-facts { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Runde 13: nur Maus/Trackpad, keine Bewegung bei reduzierter Animation. */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .press-card { transform: perspective(1200px) translateY(0) rotateX(var(--press-rx, 0deg)) rotateY(var(--press-ry, 0deg)); transition: transform 500ms cubic-bezier(.2,.65,.3,1); }
+  .press-card.is-hovering { transform: perspective(1200px) translateY(-2px) rotateX(var(--press-rx, 0deg)) rotateY(var(--press-ry, 0deg)); transition-duration: 180ms; }
+  .press-card::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit; background: radial-gradient(circle 360px at var(--press-x, 50%) var(--press-y, 50%), var(--orange), transparent 70%); opacity: 0; transition: opacity 500ms ease; }
+  .press-card.is-hovering::before { opacity: .08; }
 }

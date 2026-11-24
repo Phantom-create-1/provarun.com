@@ -38,22 +38,6 @@
     hero.classList.add('is-scroll-ready');
   }
 
-  // Einmalige Lichtfolge. Grundzustand und sämtliche Beschriftungen bleiben sichtbar.
-  const anatomy = document.querySelector('.anatomy-study');
-  const anatomyObserver = new IntersectionObserver((entries) => {
-    for (const { target, isIntersecting } of entries) {
-      if (!isIntersecting) continue;
-      target.classList.add('is-illuminating');
-      target.addEventListener('animationend', (event) => {
-        if (event.target.classList.contains('force-mark')) {
-          target.classList.remove('is-illuminating');
-        }
-      });
-      anatomyObserver.unobserve(target);
-    }
-  }, { threshold: .25 });
-  if (anatomy) anatomyObserver.observe(anatomy);
-
   const observer = new IntersectionObserver((entries) => {
     for (const { target, isIntersecting } of entries) {
       if (!isIntersecting) continue;
@@ -73,10 +57,8 @@
   const stop = () => {
     if (!motion.matches) return;
     observer.disconnect();
-    anatomyObserver.disconnect();
     closing?.classList.remove('is-scroll-ready');
     hero?.classList.remove('is-scroll-ready');
-    anatomy?.classList.remove('is-illuminating');
     for (const target of document.querySelectorAll('.is-entering')) {
       target.classList.remove('is-entering');
     }
@@ -87,4 +69,70 @@
   document.addEventListener('focusin', ({ target }) => {
     target.closest('.is-entering')?.classList.remove('is-entering');
   });
+})();
+
+/* ZEIT-Karten: eine gemeinsame, optionale Mausbewegung für DE/EN und Über. */
+(() => {
+  'use strict';
+  const hover = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+  const cards = document.querySelectorAll('.press-card');
+  if (!cards.length) return;
+  const resets = [];
+  const invalidations = [];
+  for (const card of cards) {
+    let bounds = null;
+    let frame = 0;
+    let position = null;
+    // Die unbewegte Hülle liefert stabile Koordinaten, auch beim Wiedereintritt.
+    const measure = () => {
+      const shell = card.parentElement;
+      const rect = shell.getBoundingClientRect();
+      const style = window.getComputedStyle(shell);
+      const left = parseFloat(style.paddingLeft) || 0;
+      const right = parseFloat(style.paddingRight) || 0;
+      const top = parseFloat(style.paddingTop) || 0;
+      bounds = { left: rect.left + left, top: rect.top + top,
+        width: rect.width - left - right, height: card.offsetHeight };
+    };
+    const update = () => {
+      frame = 0;
+      if (!hover.matches || !position || !bounds?.width || !bounds.height) return;
+      const x = Math.max(0, Math.min(1, (position.x - bounds.left) / bounds.width));
+      const y = Math.max(0, Math.min(1, (position.y - bounds.top) / bounds.height));
+      card.style.setProperty('--press-rx', `${((.5 - y) * 4).toFixed(3)}deg`);
+      card.style.setProperty('--press-ry', `${((x - .5) * 4).toFixed(3)}deg`);
+      card.style.setProperty('--press-x', `${(x * 100).toFixed(2)}%`);
+      card.style.setProperty('--press-y', `${(y * 100).toFixed(2)}%`);
+      card.classList.remove('is-entering');
+      card.classList.add('is-hovering');
+    };
+    const move = event => {
+      if (!hover.matches || event.pointerType !== 'mouse') return;
+      if (!bounds) measure();
+      position = { x: event.clientX, y: event.clientY };
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    const reset = () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = 0;
+      position = null;
+      bounds = null;
+      card.classList.remove('is-hovering');
+      card.style.removeProperty('--press-rx');
+      card.style.removeProperty('--press-ry');
+    };
+    card.addEventListener('pointerenter', move);
+    card.addEventListener('pointermove', move);
+    card.addEventListener('pointerleave', reset);
+    card.addEventListener('pointercancel', reset);
+    resets.push(reset);
+    invalidations.push(() => { bounds = null; });
+  }
+  const resetAll = () => resets.forEach(reset => reset());
+  const invalidate = () => invalidations.forEach(invalidate => invalidate());
+  window.addEventListener('resize', invalidate, { passive: true });
+  window.addEventListener('scroll', invalidate, { passive: true });
+  window.addEventListener('blur', resetAll);
+  if (hover.addEventListener) hover.addEventListener('change', resetAll);
+  else if (hover.addListener) hover.addListener(resetAll);
 })();
